@@ -1,4 +1,6 @@
-const apiKey = APIKEY_WEATHER_APP;
+const apiKey = process.env.APIKEY_WEATHER_APP;
+
+console.log(process.env.APIKEY_WEATHER_APP);
 
 //Format Date start//
 function formatDate(date) {
@@ -70,3 +72,5 @@ let location = document.querySelector("#search-location");
 location.addEventListener("click", showCurrentLocation);
 
 searchCity("New York");
+
+
