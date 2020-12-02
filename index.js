@@ -1,6 +1,6 @@
 const apiKey = process.env.APIKEY_WEATHER_APP;
 
-console.log(process.env.APIKEY_WEATHER_APP);
+console.log("apikey", process.env.APIKEY_WEATHER_APP);
 
 //Format Date start//
 function formatDate(date) {
