@@ -1,3 +1,5 @@
+const apiKey = APIKEY_WEATHER_APP;
+
 //Format Date start//
 function formatDate(date) {
   let days = [
@@ -41,7 +43,6 @@ function showTemp(response) {
 }
 
 function searchCity(city) {
-  let apiKey = APIKEY_WEATHER_APP;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemp);
 }
@@ -51,11 +52,12 @@ function search(event) {
   let city = document.querySelector("#validationTooltipUsername").value;
   searchCity(city);
 }
+
 function searchLocation(position) {
-  let apiKey = APIKEY_WEATHER_APP;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(showTemp);
 }
+
 function showCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
