@@ -1,6 +1,6 @@
-//General //
+//General 
 
-let apiKey = "89c34fbb589f31537eeb4412cedf92ce";
+const apiKey = "89c34fbb589f31537eeb4412cedf92ce";
 
 //Format Date start//
 function formatDate(date) {
