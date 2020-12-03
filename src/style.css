@@ -57,9 +57,7 @@ input[type="submit"] {
 }
 
 .currently {
-  width: 300px;
   text-align: center;
-  height: 200px;
 }
 .currently-date,
 .currently {
