@@ -18,6 +18,7 @@ footer {
   max-width: auto;
   background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
   padding: 10px;
+  border-radius: 20px;
 }
 .row {
   align-items: center;
