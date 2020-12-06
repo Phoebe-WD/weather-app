@@ -3,22 +3,22 @@ body {
 }
 h1 {
   text-align: center;
+  color: #070d59;
 }
-h1,
 h2,
 h3,
 h4 {
-  color: #070d59;
+  color: white;
 }
 footer {
-  text-align: center;
+  text-align: end;
+  color: #070d59;
 }
 
 .container {
   max-width: 700px;
-  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+  background-image: url(https://i.imgur.com/mapc78J.png);
   align-items: center;
-  padding: 10px;
   border-radius: 20px;
 }
 .row {
@@ -67,6 +67,9 @@ h3,
 .city {
   text-align: center;
 }
+#currently-city {
+  font-weight: bold;
+}
 
 .container-forecast {
   margin: 10px 0;
@@ -78,8 +81,7 @@ h3,
 .fa-wind,
 .fa-water {
   font-size: 30px;
-
-  color: #7579e7;
+  color: #070d59;
 }
 
 .prec {
@@ -104,7 +106,7 @@ ul {
 #weather {
   text-transform: capitalize;
   font-size: 25px;
-  color: #070d59;
+  color: white;
 }
 #img-today {
   display: block;
