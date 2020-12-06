@@ -57,10 +57,11 @@
         </div>
       </form>
       <div class="row">
-        <div class="col-6">
+        <div class="col-12">
           <div class="clearfix weather-temperature">
-            <img src="" alt="" id="img-today" class="float-left" />
-            <div class="float-left currently">
+            <h2 class="city" id="currently-city"></h2>
+            <h3><span id="currently-date"> </span> <br /></h3>
+            <div class="currently">
               <h3>
                 <span id="temp-change"></span>
                 <span id="units">
@@ -68,26 +69,15 @@
                   <a href="#" id="fahrenheint">F</a>
                 </span>
               </h3>
+              <img src="" alt="" id="img-today" />
               <span id="weather"> </span>
+              <h4 class="prec">
+                <i class="fas fa-water"></i> Humidity:
+                <span id="humidity"></span>% <br />
+                <i class="fas fa-wind"></i> Wind: <span id="wind"></span> km/h
+                <br />
+              </h4>
             </div>
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="currently-date">
-            <h2 class="city" id="currently-city"></h2>
-            <h3>
-              <span id="currently-date"> </span> <br />
-              <span class="temp"
-                >Min/ Max <br />
-                13 ºC / 29 ºC</span
-              >
-            </h3>
-            <h4 class="prec">
-              <i class="fas fa-water"></i> Humidity:
-              <span id="humidity"></span>% <br />
-              <i class="fas fa-wind"></i> Wind: <span id="wind"></span> km/h
-              <br />
-            </h4>
           </div>
         </div>
       </div>

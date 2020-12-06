@@ -15,8 +15,9 @@ footer {
 }
 
 .container {
-  max-width: auto;
+  max-width: 900px;
   background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  align-items: center;
   padding: 10px;
   border-radius: 20px;
 }
@@ -76,12 +77,12 @@ h3,
 .fa-wind,
 .fa-water {
   font-size: 30px;
-  margin-right: 10px;
+
   color: #7579e7;
 }
 
 .prec {
-  margin-left: 5px;
+  text-align: center;
 }
 
 ul {
@@ -101,12 +102,12 @@ ul {
 
 #weather {
   text-transform: capitalize;
-  font-size: 32px;
+  font-size: 25px;
   color: #070d59;
 }
 #img-today {
   display: block;
-  margin-left: 20px;
+  margin: 0 auto;
 }
 #units {
   position: relative;
