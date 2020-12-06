@@ -37,7 +37,9 @@ function showTemp(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector("#weather").innerHTML = response.data.weather[0].main;
+  document.querySelector("#weather").innerHTML = response.data.weather[0].description;
+  document.querySelector("#img-today").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+document.querySelector("#img-today").setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(city) {

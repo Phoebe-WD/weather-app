@@ -69,33 +69,19 @@ h3,
 .container-forecast {
   margin: 10px 0;
   width: auto;
-
   text-align: center;
   align-items: center;
 }
-.fa-cloud-sun,
+
 .fa-wind,
-.fa-water,
-.fa-cloud-rain {
-  color: #7579e7;
-}
-.fa-cloud-sun {
-  font-size: 50px;
-}
-.fa-wind,
-.fa-water,
-.fa-cloud-rain {
+.fa-water {
   font-size: 30px;
   margin-right: 10px;
+  color: #7579e7;
 }
 
 .prec {
   margin-left: 5px;
-}
-
-#temp-change,
-#units {
-  font-size: 60px;
 }
 
 ul {
@@ -104,12 +90,26 @@ ul {
   margin: 0;
   padding: 0;
 }
+.inline {
+  display: inline-block;
+}
+#temp-change {
+  padding: 5px;
+  margin-top: 10px;
+  font-size: 65px;
+}
 
 #weather {
+  text-transform: capitalize;
   font-size: 32px;
   color: #070d59;
 }
-
 #img-today {
-  font-size: 55px;
+  display: block;
+  margin: 0 auto;
+}
+#units {
+  position: relative;
+  font-size: 25px;
+  top: -30px;
 }
