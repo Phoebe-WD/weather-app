@@ -106,7 +106,7 @@ ul {
 }
 #img-today {
   display: block;
-  margin: 0 auto;
+  margin-left: 20px;
 }
 #units {
   position: relative;
