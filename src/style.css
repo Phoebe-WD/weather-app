@@ -124,3 +124,20 @@ ul {
   text-decoration: none;
   color: white;
 }
+
+#temps,
+.temp-max,
+.temp-min {
+  color: white;
+  font-weight: bold;
+}
+
+li h3 {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+ul li img {
+  display: inline-block;
+}
