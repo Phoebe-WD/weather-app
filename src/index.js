@@ -28,8 +28,9 @@ currentlyDate.innerHTML = formatDate(currentTime);
 
 function showTemp(response) {
   document.querySelector("#currently-city").innerHTML = response.data.name;
+  celsiusTemp = response.data.main.temp;
   document.querySelector("#temp-change").innerHTML = Math.round(
-    response.data.main.temp
+    celsiusTemp
   );
   document.querySelector("#humidity").innerHTML = Math.round(
     response.data.main.humidity
@@ -40,6 +41,8 @@ function showTemp(response) {
   document.querySelector("#weather").innerHTML = response.data.weather[0].description;
   document.querySelector("#img-today").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 document.querySelector("#img-today").setAttribute("alt", response.data.weather[0].description);
+
+ 
 }
 
 function searchCity(city) {
@@ -63,10 +66,29 @@ function showCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+function showFahrenheitTemp(event){
+  event.preventDefault();
+  let fahrenheitLink = (celsiusTemp * 9 ) / 5 + 32;
+  document.querySelector("#temp-change").innerHTML = Math.round(fahrenheitLink);
+}
+
+function showCelsiusTemp(event){
+  event.preventDefault();
+  document.querySelector("#temp-change").innerHTML = Math.round(celsiusTemp);
+}
+
+let celsiusTemp = null;
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
 let location2 = document.querySelector("#search-location");
 location2.addEventListener("click", showCurrentLocation);
+
+let fahrenheitClick = document.querySelector("#fahrenheit");
+fahrenheitClick.addEventListener("click", showFahrenheitTemp);
+
+let celsiusClick = document.querySelector("#celsius");
+celsiusClick.addEventListener("click", showCelsiusTemp);
 
 searchCity("New York");
