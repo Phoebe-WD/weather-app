@@ -74,6 +74,8 @@ h3,
 }
 
 .prec {
+  position: relative;
+  top: -16px;
   text-align: center;
 }
 
@@ -93,11 +95,16 @@ ul {
 }
 
 #weather {
+  position: relative;
+  margin-top: 0px;
+  top: -17px;
   text-transform: capitalize;
   font-size: 25px;
   color: white;
 }
 #img-today {
+  position: relative;
+  top: -16px;
   display: block;
   margin: 0 auto;
 }

@@ -76,7 +76,7 @@ function showFahrenheitTemp(event){
 
 function showCelsiusTemp(event){
   event.preventDefault();
-    celsiusClick.classList.add("active");
+  celsiusClick.classList.add("active");
   fahrenheitClick.classList.remove("active");
   document.querySelector("#temp-change").innerHTML = Math.round(celsiusTemp);
 }
