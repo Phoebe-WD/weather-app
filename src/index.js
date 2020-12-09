@@ -92,13 +92,13 @@ function search(event) {
 }
 
 function showCurrentForecast(response){
-    let forecastElemnent = document.querySelector("#forecast");
+  let forecastElemnent = document.querySelector("#forecast");
   forecastElemnent.innerHTML = null;
-let forecast = null;
-for (let index = 0; index < 4; index++) {
+  let forecast = null;
+  for (let index = 0; index < 4; index++) {
   forecast = response.data.list[index];
-forecastElemnent.innerHTML += `<li>
-                <h3>${formatHours(forecast.dt * 1000)}</h3>
+  forecastElemnent.innerHTML += `<li>
+           <h3>${formatHours(forecast.dt * 1000)}</h3>
                 <img
                   src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
                 />
