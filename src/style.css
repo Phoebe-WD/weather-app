@@ -18,7 +18,7 @@ footer {
 
 .container {
   max-width: 700px;
-  background-image: url(https://i.imgur.com/mapc78J.png);
+  background-image: url(https://i.imgur.com/b2Rp3tw.jpg);
   align-items: center;
   border-radius: 20px;
 }
@@ -140,4 +140,9 @@ li h3 {
 
 ul li img {
   display: inline-block;
+}
+
+#name,
+#source-code {
+  color: white;
 }
