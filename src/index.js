@@ -69,8 +69,8 @@ forecastElemnent.innerHTML += `<li>
                   src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
                 />
                 <span id="temps">
-                  <span class="temp-max">${Math.round(forecast.main.temp_max)}ºC</span> /
-                  <span class="temp-min">${Math.round(forecast.main.temp_min)}ºC</span></span
+                  <span class="temp-max">${Math.round(forecast.main.temp_max)}º</span> /
+                  <span class="temp-min">${Math.round(forecast.main.temp_min)}º</span></span
                 >
               </li>`;
 }
@@ -103,8 +103,8 @@ function showCurrentForecast(response){
                   src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
                 />
                 <span id="temps">
-                  <span class="temp-max">${Math.round(forecast.main.temp_max)}ºC</span> /
-                  <span class="temp-min">${Math.round(forecast.main.temp_min)}ºC</span></span
+                  <span class="temp-max">${Math.round(forecast.main.temp_max)}º</span> /
+                  <span class="temp-min">${Math.round(forecast.main.temp_min)}º</span></span
                 >
               </li>`;
 }
