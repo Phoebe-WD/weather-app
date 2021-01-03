@@ -18,7 +18,7 @@ To use the project:
 ### Installing our app 🔧
 
 - First you need to download the repository
-- Use a local host _(if your using VS Code I recommend to use Live Server Extension)_ or deploy it in [netfly](https://www.netlify.com/) or in whatever you think is best for you
+- Use a local host _(if your using VS Code I recommend to use Live Server Extension)_ or deploy it in [netlifly](https://www.netlify.com/) or in whatever you think is best for you
 
 **Now enjoy!**
 
