@@ -26,18 +26,19 @@ let currentTime = new Date();
 currentlyDate.innerHTML = formatDate(currentTime);
 //Format Date End//
 
-function formatHours(timestamp){
+function formatHours(timestamp) {
   let date = new Date(timestamp);
-    let hour = date.getHours();
+  let hour = date.getHours();
   if (hour < 10) {
     hour = `0${hour}`;
   }
   let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
-  return `${hour}:${minutes}`;
+    return `${hour}:${minutes}`;
+  }
 }
-}
+
 function showTemp(response) {
   document.querySelector("#currently-city").innerHTML = response.data.name;
   celsiusTemp = response.data.main.temp;
@@ -52,18 +53,18 @@ function showTemp(response) {
   );
   document.querySelector("#weather").innerHTML = response.data.weather[0].description;
   document.querySelector("#img-today").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-document.querySelector("#img-today").setAttribute("alt", response.data.weather[0].description);
+  document.querySelector("#img-today").setAttribute("alt", response.data.weather[0].description);
 
- 
+
 }
 
-function showForecast(response){
+function showForecast(response) {
   let forecastElemnent = document.querySelector("#forecast");
   forecastElemnent.innerHTML = null;
-let forecast = null;
-for (let index = 0; index < 4; index++) {
-  forecast = response.data.list[index];
-forecastElemnent.innerHTML += `<li>
+  let forecast = null;
+  for (let index = 0; index < 4; index++) {
+    forecast = response.data.list[index];
+    forecastElemnent.innerHTML += `<li>
                 <h3>${formatHours(forecast.dt * 1000)}</h3>
                 <img
                   src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
@@ -73,7 +74,7 @@ forecastElemnent.innerHTML += `<li>
                   <span class="temp-min">${Math.round(forecast.main.temp_min)}º</span></span
                 >
               </li>`;
-}
+  }
 }
 
 function searchCity(city) {
@@ -91,13 +92,13 @@ function search(event) {
   searchCity(city);
 }
 
-function showCurrentForecast(response){
+function showCurrentForecast(response) {
   let forecastElemnent = document.querySelector("#forecast");
   forecastElemnent.innerHTML = null;
   let forecast = null;
   for (let index = 0; index < 4; index++) {
-  forecast = response.data.list[index];
-  forecastElemnent.innerHTML += `<li>
+    forecast = response.data.list[index];
+    forecastElemnent.innerHTML += `<li>
            <h3>${formatHours(forecast.dt * 1000)}</h3>
                 <img
                   src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
@@ -107,7 +108,7 @@ function showCurrentForecast(response){
                   <span class="temp-min">${Math.round(forecast.main.temp_min)}º</span></span
                 >
               </li>`;
-}
+  }
 }
 
 function searchLocation(position) {
@@ -118,20 +119,21 @@ function searchLocation(position) {
   apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(showCurrentForecast);
 }
+
 function showCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-function showFahrenheitTemp(event){
+function showFahrenheitTemp(event) {
   event.preventDefault();
   celsiusClick.classList.remove("active");
   fahrenheitClick.classList.add("active");
-  let fahrenheitLink = (celsiusTemp * 9 ) / 5 + 32;
+  let fahrenheitLink = (celsiusTemp * 9) / 5 + 32;
   document.querySelector("#temp-change").innerHTML = Math.round(fahrenheitLink);
 }
 
-function showCelsiusTemp(event){
+function showCelsiusTemp(event) {
   event.preventDefault();
   celsiusClick.classList.add("active");
   fahrenheitClick.classList.remove("active");
